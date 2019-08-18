@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text utils</title>
+</head>
+<body>
+    <h1>Text utils</h1>
+    <form action="/analyze" method="post">{% csrf_token %}
+        <textarea name="text" style="height : 200px; width : 100%;" placeholder="Enter your text here..."></textarea>
+        <h3>
+            <br><label for="id1"><input type="checkbox" name="pr" id="id1">Remove punctuation</label>
+            <br><label for="id2"><input type="checkbox" name="esr" id="id2">Remove extra spaces</label>
+            <br><label for="id3"><input type="checkbox" name="nlr" id="id3">Remove newlines</label>
+            <br><label for="id4"><input type="checkbox" name="uc" id="id4">Change to uppercase</label>
+            <br><label for="id5"><input type="checkbox" name="cc" id="id5">Count charaters</label>
+        </h3>
+        <br><br><button type="submit">Analyze text</button>
+    </form>
+</body>
+</html>
